@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: space-evenly;
+            align-items: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+
+        .container {
+            height: 30rem;
+            width: 25rem;
+            background-color: rgb(102, 100, 100);
+            margin-top: 1rem;
+            border-radius: 10px;
+            box-shadow: 5px 5px rgb(139, 136, 136);
+
+        }
+
+        .screen {
+            height: 7rem;
+            width: 100%;
+            background-color: rgb(67, 78, 78);
+            border-radius: 10px 10px 0 0;
+
+        }
+
+        #display {
+
+            height: 5rem;
+            margin: 20px 0 0 9px;
+            width: 95%;
+            border: none;
+            color: rgb(12, 12, 12);
+            font-size: 40px;
+        }
+
+        .button {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 30px 10px 0 10px;
+        }
+
+        button {
+            height: 60px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 2px 2px rgb(163, 10, 10);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen">
+            <input type="text" id="display" readonly name="display">
+        </div>
+        <div class="button">
+            <button class="number" onclick="operator('+')">+</button>
+            <button class="number" onclick="operand(7)">7</button>
+            <button class="number" onclick="operand(8)">8</button>
+            <button class="number" onclick="operand(9)">9</button>
+            <button class="number" onclick="operator('*')">*</button>
+            <button class="number" onclick="operand(4)">4</button>
+            <button class="number" onclick="operand(5)">5</button>
+            <button class="number" onclick="operand(6)">6</button>
+            <button class="number" onclick="operator('-')">-</button>
+            <button class="number" onclick="operand(1)">1</button>
+            <button class="number" onclick="operand(2)">2</button>
+            <button class="number" onclick="operand(3)">3</button>
+            <button class="number" onclick="operator('/')">/</button>
+            <button class="number" onclick="operand(0)">0</button>
+            <button class="number" onclick="clearDisplay()">C</button>
+            <button class="number" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="index.js">
+
+    </script>
+</body>
+
+</html>
